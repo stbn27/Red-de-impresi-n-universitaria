@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Presentación: Red de Impresión Universitaria</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            /* Evita el scroll de la página entera */
+        }
+
+        /* Estilo para las transiciones de las diapositivas */
+        .slide {
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            min-height: 100vh;
+        }
+
+        /* Estilos para las animaciones de entrada */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Retrasos para la animación escalonada de elementos */
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        /* Estilo para los puntos de navegación */
+        .nav-dot {
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- Contenedor principal del carrusel -->
+    <main id="presentation-container" class="relative w-full h-screen overflow-hidden">
+
+        <!-- Diapositiva 0: Título -->
+        <div
+            class="slide absolute w-full h-full flex flex-col justify-center items-center text-center p-8 bg-gradient-to-br from-fuchsia-900 to-gray-900">
+            <div class="fade-in-up">
+                <h1 class="text-6xl md:text-8xl font-black tracking-tighter">Red de Impresión Universitaria</h1>
+                <p class="text-2xl md:text-3xl text-fuchsia-300 mt-4">Revolucionando la forma de imprimir</p>
+            </div>
+            <div class="absolute bottom-10 text-gray-400 fade-in-up delay-1">
+                <p class="opacity-30 -mt-12">Usa las flechas para navegar</p>
+            </div>
+        </div>
+
+        <!-- Diapositiva 1: El Problema -->
+        <div class="slide absolute w-full h-full flex flex-col justify-center items-center text-center p-8 opacity-0"
+            style="transform: translateX(100%);">
+            <h2 class="text-5xl font-bold mb-12 fade-in-up">El Problema: <span class="text-red-400">¡La Odisea de
+                    Imprimir!</span> 😫</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl w-full">
+                <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 fade-in-up delay-1">
+                    <div class="text-5xl mb-4">⏳</div>
+                    <h3 class="text-2xl font-bold mb-2">Pérdida de Tiempo</h3>
+                    <p class="text-gray-300">Largas filas y desplazamientos innecesarios a edificios específicos.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 fade-in-up delay-2">
+                    <div class="text-5xl mb-4">💻</div>
+                    <h3 class="text-2xl font-bold mb-2">Dependencia de Equipos</h3>
+                    <p class="text-gray-300">Necesidad de usar computadoras designadas para enviar archivos.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 fade-in-up delay-3">
+                    <div class="text-5xl mb-4">🤯</div>
+                    <h3 class="text-2xl font-bold mb-2">Congestión y Estrés</h3>
+                    <p class="text-gray-300">Áreas de impresión saturadas, especialmente en épocas de exámenes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diapositiva 2: La Solución -->
+        <div class="slide absolute w-full h-full flex flex-col justify-center items-center text-center p-8 opacity-0"
+            style="transform: translateX(100%);">
+            <h2 class="text-5xl font-bold mb-12 fade-in-up">Nuestra Solución: <span class="text-green-400">¡Imprime
+                    desde Donde Quieras!</span> 💡</h2>
+            <div class="grid md:grid-cols-4 gap-6 max-w-6xl w-full">
+                <div class="bg-gray-800 p-6 rounded-2xl fade-in-up delay-1">
+                    <div class="text-5xl mb-4">📲</div>
+                    <h3 class="text-xl font-bold">Carga Remota</h3>
+                    <p class="text-sm text-gray-300">Desde tu laptop, tablet o celular.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-2xl fade-in-up delay-2">
+                    <div class="text-5xl mb-4">🔑</div>
+                    <h3 class="text-xl font-bold">Autenticación Segura</h3>
+                    <p class="text-sm text-gray-300">Con tu matrícula o correo institucional.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-2xl fade-in-up delay-3">
+                    <div class="text-5xl mb-4">🤖</div>
+                    <h3 class="text-xl font-bold">Gestión Inteligente</h3>
+                    <p class="text-sm text-gray-300">Asignación automática a impresoras libres.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-2xl fade-in-up delay-4">
+                    <div class="text-5xl mb-4">💳</div>
+                    <h3 class="text-xl font-bold">Monedero Electrónico</h3>
+                    <p class="text-sm text-gray-300">Paga sin necesidad de efectivo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diapositiva 3: Objetivos -->
+        <div class="slide absolute w-full h-full flex flex-col justify-center items-center p-8 opacity-0"
+            style="transform: translateX(100%);">
+            <h2 class="text-5xl font-bold mb-12 text-center fade-in-up">Objetivos del Proyecto 🎯</h2>
+            <div class="max-w-4xl w-full">
+                <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl mb-6 fade-in-up delay-1">
+                    <h3 class="text-2xl font-bold text-blue-300">Objetivo General</h3>
+                    <p class="mt-2 text-lg">Optimizar el proceso de impresión, haciéndolo más accesible y fácil de
+                        administrar para todos.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 text-left">
+                    <p class="bg-gray-800 p-4 rounded-lg fade-in-up delay-2">✔️ Implementar un servidor central.</p>
+                    <p class="bg-gray-800 p-4 rounded-lg fade-in-up delay-2">✔️ Permitir carga desde cualquier
+                        dispositivo.</p>
+                    <p class="bg-gray-800 p-4 rounded-lg fade-in-up delay-3">✔️ Automatizar las colas de impresión.</p>
+                    <p class="bg-gray-800 p-4 rounded-lg fade-in-up delay-3">✔️ Garantizar la seguridad de datos.</p>
+                    <p class="bg-gray-800 p-4 rounded-lg fade-in-up delay-4">✔️ Generar reportes para mejor control.</p>
+                    <p class="bg-gray-800 p-4 rounded-lg fade-in-up delay-4">✔️ Monitorear impresoras en tiempo real.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diapositiva 4: Cómo Funciona -->
+        <div class="slide absolute w-full h-full flex flex-col justify-center items-center p-8 opacity-0"
+            style="transform: translateX(100%);">
+            <h2 class="text-5xl font-bold mb-16 text-center fade-in-up">¿Cómo Funciona? <span
+                    class="text-yellow-400">¡Tan Fácil como 1, 2, 3!</span> 🚀</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4 w-full max-w-5xl">
+                <div class="text-center p-6 rounded-xl fade-in-up delay-1">
+                    <div class="text-7xl">1️⃣</div>
+                    <h3 class="text-3xl font-bold mt-4">Inicia Sesión</h3>
+                    <p class="mt-2 text-gray-300">Usa tus credenciales universitarias.</p>
+                </div>
+                <div class="text-5xl text-gray-600 hidden md:block fade-in-up delay-2">➡️</div>
+                <div class="text-5xl text-gray-600 md:hidden fade-in-up delay-2">⬇️</div>
+                <div class="text-center p-6 rounded-xl fade-in-up delay-3">
+                    <div class="text-7xl">2️⃣</div>
+                    <h3 class="text-3xl font-bold mt-4">Sube tu Archivo</h3>
+                    <p class="mt-2 text-gray-300">Carga el documento que necesitas.</p>
+                </div>
+                <div class="text-5xl text-gray-600 hidden md:block fade-in-up delay-4">➡️</div>
+                <div class="text-5xl text-gray-600 md:hidden fade-in-up delay-4">⬇️</div>
+                <div class="text-center p-6 rounded-xl fade-in-up delay-5">
+                    <div class="text-7xl">3️⃣</div>
+                    <h3 class="text-3xl font-bold mt-4">Configura e Imprime</h3>
+                    <p class="mt-2 text-gray-300">¡Recógelo sin hacer filas!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diapositiva 5: Impacto -->
+        <div class="slide absolute w-full h-full flex flex-col justify-center items-center text-center p-8 opacity-0"
+            style="transform: translateX(100%);">
+            <div class="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-gray-900 to-transparent">
+                <img src="impr1.avif" alt="" class="opacity-10">
+            </div>
+            <h2 class="text-5xl font-bold mb-12 fade-in-up">El Impacto: <span class="text-purple-400">¡Más Allá del
+                    Papel!</span> 🌟</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl w-full">
+                <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 fade-in-up delay-1">
+                    <div class="text-5xl mb-4">😊</div>
+                    <h3 class="text-2xl font-bold mb-2">Mejora tu Experiencia</h3>
+                    <p class="text-gray-300">Menos estrés y más tiempo para lo que de verdad importa: ¡estudiar!</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 fade-in-up delay-2">
+                    <div class="text-5xl mb-4">📊</div>
+                    <h3 class="text-2xl font-bold mb-2">Eficiencia Administrativa</h3>
+                    <p class="text-gray-300">Un mejor control y gestión de los recursos de impresión.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 fade-in-up delay-3">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold mb-2">Innovación</h3>
+                    <p class="text-gray-300">Posiciona a nuestra universidad a la vanguardia tecnológica.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diapositiva 6: Antecedentes -->
+        <div class="slide absolute w-full h-full flex flex-col justify-center items-center p-8 opacity-0"
+            style="transform: translateX(100%);">
+            <h2 class="text-5xl font-bold mb-12 text-center fade-in-up">Antecedentes: ¿Qué Hay en el Mercado? 🌍</h2>
+            <div class="flex flex-col md:flex-row gap-8 max-w-5xl w-full">
+                <div class="flex-1 bg-gray-800/50 p-6 rounded-xl fade-in-up delay-1">
+                    <h3 class="text-2xl font-bold mb-4">Sistemas Existentes</h3>
+                    <p class="mb-2"><strong class="text-blue-300">Xquenda (ITAM):</strong> Permite cargar archivos, pero
+                        requiere ir a un kiosco específico para liberarlos.</p>
+                    <p><strong class="text-blue-300">PapercutMF (U. Comillas):</strong> Permite imprimir desde varios
+                        dispositivos, pero la autenticación es en la propia impresora.</p>
+                </div>
+                <div class="flex-1 bg-green-800/30 p-6 rounded-xl border border-green-500 fade-in-up delay-2">
+                    <h3 class="text-2xl font-bold mb-4 text-green-300">¿Qué nos hace diferentes?</h3>
+                    <p class="mb-2">✅ <strong class="text-green-200">Elección Flexible:</strong> Decide dónde recoger tu
+                        trabajo *después* de enviarlo.</p>
+                    <p class="mb-2">✅ <strong class="text-green-200">Reportes Avanzados:</strong> Datos para optimizar
+                        recursos.</p>
+                    <p>✅ <strong class="text-green-200">Soporte Total:</strong> Compatible con cualquier formato y
+                        tamaño.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diapositiva 7: Costos -->
+        <div class="slide absolute w-full h-full flex flex-col justify-center items-center p-8 opacity-0"
+            style="transform: translateX(100%);">
+            <h2 class="text-5xl font-bold mb-12 text-center fade-in-up">Costos del Proyecto: <span
+                    class="text-yellow-300">Una Inversión Inteligente</span> 💰</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl w-full">
+                <div class="bg-gray-800 p-6 rounded-xl fade-in-up delay-1">
+                    <h3 class="text-2xl font-bold mb-4">Inversión Inicial (Aprox.)</h3>
+                    <p class="mb-2"><strong class="font-bold">Hardware (Servidor):</strong> $30,000 - $60,000 MXN</p>
+                    <p><strong class="font-bold">Software y Desarrollo:</strong> $80,000 - $150,000 MXN</p>
+                    <p class="text-sm text-gray-400 mt-2">(Ahorramos miles en licencias usando código abierto)</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl fade-in-up delay-2">
+                    <h3 class="text-2xl font-bold mb-4">Costos Operativos (Mensual)</h3>
+                    <p class="mb-2"><strong class="font-bold">Mantenimiento y Soporte:</strong> $5,000 - $10,000 MXN</p>
+                    <p><strong class="font-bold">Consumibles:</strong> ¡Costo existente que reduciremos!</p>
+                    <p class="text-sm text-green-400 mt-2">El retorno de inversión es el ahorro de tiempo para miles de
+                        estudiantes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diapositiva 8: El Equipo -->
+        <div class="slide absolute w-full h-full flex flex-col justify-center items-center text-center p-8 opacity-0"
+            style="transform: translateX(100%);">
+            <h2 class="text-5xl font-bold mb-12 fade-in-up">¿Quiénes Hacen Esto Posible? <span class="text-cyan-400">El
+                    Dream Team</span> 👥</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl w-full">
+                <div
+                    class="bg-gray-800 p-6 rounded-full aspect-square flex flex-col justify-center items-center fade-in-up delay-1">
+                    <div class="text-5xl mb-2">🎓</div>
+                    <h3 class="text-xl font-bold">Estudiantes</h3>
+                </div>
+                <div
+                    class="bg-gray-800 p-6 rounded-full aspect-square flex flex-col justify-center items-center fade-in-up delay-2">
+                    <div class="text-5xl mb-2">👑</div>
+                    <h3 class="text-xl font-bold">Admins</h3>
+                </div>
+                <div
+                    class="bg-gray-800 p-6 rounded-full aspect-square flex flex-col justify-center items-center fade-in-up delay-3">
+                    <div class="text-5xl mb-2">🛠️</div>
+                    <h3 class="text-xl font-bold">Mantenimiento</h3>
+                </div>
+                <div
+                    class="bg-gray-800 p-6 rounded-full aspect-square flex flex-col justify-center items-center fade-in-up delay-4">
+                    <div class="text-5xl mb-2">👨‍💻</div>
+                    <h3 class="text-xl font-bold">Programadores</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diapositiva 9: Conclusión -->
+        <div class="slide absolute w-full h-full flex flex-col justify-center items-center text-center p-8 bg-gradient-to-tr from-fuchsia-900 to-gray-900 opacity-0"
+            style="transform: translateX(100%);">
+            <div class="absolute top-0 left-0 w-full h-full">
+                <img src="impr1.avif" alt="Imagen de fondo" class="w-full h-full object-cover opacity-20">
+            </div>
+            <div class="fade-in-up">
+                <h2 class="text-5xl font-bold mb-6">En Conclusión</h2>
+                <p class="text-2xl max-w-4xl text-fuchsia-200">La Red de Impresión Universitaria es más que un proyecto; es
+                    un paso hacia una universidad más moderna, eficiente y amigable para todos.</p>
+                <p class="text-4xl font-black mt-12 text-white">¡Gracias!</p>
+            </div>
+        </div>
+
+        <!-- Diapositiva 10: Integrantes -->
+        <div class="slide absolute w-full h-full flex flex-col justify-center items-center text-center p-8 bg-gradient-to-tr from-fuchsia-900 to-gray-900 opacity-0"
+            style="transform: translateX(100%);">
+            <div class="absolute top-0 left-0 w-full h-full">
+                <img src="impr2.webp" alt="Imagen de fondo" class="w-full h-full object-cover opacity-20">
+            </div>
+            <div class="fade-in-up">
+                <h2 class="text-5xl font-bold mb-6">Integrantes</h2>
+                <ul class="text-lg text-gray-300">
+                    <li>Avila Romero Astrid</li>
+                    <li>José Julian Esteban Nuñez</li>
+                    <li>Guillermo Gutiérrez Rafael</li>
+                    <li>-</li>
+                    <li>-</li>
+                </ul>
+                <p class="mt-12">Equipo <span class="color-fuchsia-300 font-bold">Magenta</span></p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Controles de Navegación -->
+    <div class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-8">
+        <button id="prev-btn"
+            class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <div id="nav-dots" class="flex gap-2">
+            <!-- Los puntos de navegación se generan con JS -->
+        </div>
+        <button id="next-btn" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Selecciona todos los elementos necesarios del DOM
+            const slides = document.querySelectorAll('.slide');
+            const nextBtn = document.getElementById('next-btn');
+            const prevBtn = document.getElementById('prev-btn');
+            const navDotsContainer = document.getElementById('nav-dots');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            // Función para actualizar el estado visual de las diapositivas y la navegación
+            function updateSlides() {
+                // Itera sobre cada diapositiva para actualizar su estilo
+                slides.forEach((slide, index) => {
+                    const animatedElements = slide.querySelectorAll('.fade-in-up');
+
+                    if (index === currentSlide) {
+                        // Diapositiva actual: visible y en posición
+                        slide.style.opacity = '1';
+                        slide.style.transform = 'translateX(0)';
+                        slide.style.zIndex = '10';
+                        // Reactiva la animación de los elementos internos
+                        animatedElements.forEach(el => {
+                            el.style.animation = 'none';
+                            el.offsetHeight; // Truco para forzar el reflow
+                            el.style.animation = '';
+                        });
+                    } else if (index < currentSlide) {
+                        // Diapositivas anteriores: movidas a la izquierda
+                        slide.style.opacity = '0';
+                        slide.style.transform = 'translateX(-100%)';
+                        slide.style.zIndex = '0';
+                    } else {
+                        // Diapositivas siguientes: movidas a la derecha
+                        slide.style.opacity = '0';
+                        slide.style.transform = 'translateX(100%)';
+                        slide.style.zIndex = '0';
+                    }
+                });
+
+                // Actualiza el estado de los botones de navegación
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === totalSlides - 1;
+
+                // Actualiza el punto de navegación activo
+                const dots = navDotsContainer.querySelectorAll('.nav-dot');
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.add('bg-blue-400');
+                        dot.classList.remove('bg-gray-600');
+                    } else {
+                        dot.classList.add('bg-gray-600');
+                        dot.classList.remove('bg-blue-400');
+                    }
+                });
+            }
+
+            // Genera los puntos de navegación dinámicamente
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('nav-dot', 'w-3', 'h-3', 'rounded-full');
+                dot.dataset.slide = i;
+                navDotsContainer.appendChild(dot);
+                dot.addEventListener('click', () => {
+                    currentSlide = i;
+                    updateSlides();
+                });
+            }
+
+            // Event listener para el botón "siguiente"
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateSlides();
+                }
+            });
+
+            // Event listener para el botón "anterior"
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlides();
+                }
+            });
+
+            // Event listener para la navegación con teclas de flecha
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' && currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateSlides();
+                } else if (e.key === 'ArrowLeft' && currentSlide > 0) {
+                    currentSlide--;
+                    updateSlides();
+                }
+            });
+
+            // Inicializa la presentación en la primera diapositiva
+            updateSlides();
+        });
+    </script>
+</body>
+
+</html>
